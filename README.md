@@ -26,13 +26,13 @@ This project is not affiliated with Facebook, Inc. and is intended for **educati
 
 ## 🚀 Features (Planned / Built)
 
-- [x] User registration and login
-- [x] Profile management
-- [x] Post creation (text, image)
-- [x] Like and comment system
-- [x] Friends / Follow system
-- [x] Real-time chat (Messenger-style)
-- [x] Marketplace section
+- [ ] User registration and login
+- [ ] Profile management
+- [ ] Post creation (text, image)
+- [ ] Like and comment system
+- [ ] Friends / Follow system
+- [ ] Real-time chat (Messenger-style)
+- [ ] Marketplace section
 - [ ] Group creation and joining
 - [ ] Notifications system
 
