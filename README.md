@@ -47,8 +47,37 @@ This project is not affiliated with Facebook, Inc. and is intended for **educati
 - Clean code practices and project organization
 
 ## 📁 Folder Structure
-
 ```bash
 / (Root)
 ├── frontend/        # Next.js frontend
 └── backend/         # Express (TS) + MongoDB 
+
+
+## 🌿 Git Branching Strategy
+This project uses a structured Git workflow to manage development, testing, and deployment in a clean and scalable way.
+
+### 🔄 Branches Overview
+| Branch Name     | Purpose                                                                 |
+|-----------------|-------------------------------------------------------------------------|
+| `main` / `production` | ✅ Stable, production-ready code. Used for final live deployments.     |
+| `development`           | 🧪 Ongoing development. New features are merged here for staging/testing. |
+| `feature/*`     | 🛠️  Specific feature branches (e.g. `feature/chat`, `feature/profile`).     |
+| `hotfix/*`      | 🚑 Emergency fixes to be patched directly into production.                |
+| `release/*`     | 🚀 Pre-release polish and testing before pushing to `main`. (Optional)     |
+
+### 🛠 Example Workflow
+
+```bash
+# Start a new feature
+git checkout -b feature/user-profile
+
+# Work, commit, and push
+git push origin feature/user-profile
+
+# Merge into dev when feature is done
+git checkout dev
+git merge feature/user-profile
+
+# Deploy tested features by merging dev → main
+git checkout main
+git merge dev
