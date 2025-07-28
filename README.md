@@ -51,7 +51,7 @@ This project is not affiliated with Facebook, Inc. and is intended for **educati
 / (Root)
 ├── frontend/        # Next.js frontend
 └── backend/         # Express (TS) + MongoDB 
-
+```
 
 ## 🌿 Git Branching Strategy
 This project uses a structured Git workflow to manage development, testing, and deployment in a clean and scalable way.
