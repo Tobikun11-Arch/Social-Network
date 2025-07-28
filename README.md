@@ -16,8 +16,6 @@ This project is not affiliated with Facebook, Inc. and is intended for **educati
 
 ## 🔧 Tech Stack
 
-> *You can update this section based on your exact tech choices.*
-
 - **Frontend:** Next.js, React, TypeScript, Tailwind CSS
 - **Backend:** Node.js, Express.js
 - **Database:** MongoDB with Mongoose
@@ -38,7 +36,7 @@ This project is not affiliated with Facebook, Inc. and is intended for **educati
 - [ ] Group creation and joining
 - [ ] Notifications system
 
-> This is a work in progress and features may be added or refined over time.
+> This is a work in progress and features may be added over time.
 
 ## 🧠 Learning Focus
 
@@ -53,4 +51,4 @@ This project is not affiliated with Facebook, Inc. and is intended for **educati
 ```bash
 / (Root)
 ├── frontend/        # Next.js frontend
-└── backend/         # Express (TS) + MongoDB backend
+└── backend/         # Express (TS) + MongoDB 
