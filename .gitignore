@@ -6,6 +6,7 @@
 *.env.development
 *.env.production
 *.env.test
+*.env.development
 
 # ===============================
 # 🧩 Node Modules (frontend + backend)
