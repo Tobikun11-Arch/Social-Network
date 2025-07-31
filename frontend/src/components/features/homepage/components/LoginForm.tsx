@@ -70,9 +70,10 @@ export default function LoginForm() {
           )}
         />
         ))}
-        <Button type="submit" className="w-full bg-blue-600 text-semibold text-white">Login</Button>
-        <Link href="" className="text-blue-500">Forgot Password</Link>
+        <Button type="submit" className="w-full bg-blue-600 text-semibold text-white h-12">Login</Button>
+        <Link href="" className="block text-blue-500 text-center">Forgot Password</Link>
         <hr />
+        <Button type="submit" className="w-full bg-green-600 text-semibold text-white h-12">Create account</Button>
       </form>
     </Form>
   )
