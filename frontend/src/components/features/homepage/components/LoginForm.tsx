@@ -53,7 +53,8 @@ export default function LoginForm() {
   }
 
   return (
-    <aside className='bg-white p-8 rounded-lg shadow-lg w-full'>
+    <div className="flex-col w-full">
+      <aside className='bg-white p-8 rounded-lg shadow-lg w-full xl:w-3/4 xl:mx-auto'>
     <Form {...form}>
       <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-3">
         {fields.map((fieldDef) => (
@@ -72,12 +73,15 @@ export default function LoginForm() {
         />
         ))}
 
-        <Button type="submit" className="w-full bg-blue-600 text-semibold text-white h-12">Login</Button>
-        <Link href="" className="block text-blue-500 text-center">Forgot Password</Link>
+        <Button type="submit" className="w-full hover:bg-blue-800 bg-blue-600 text-semibold text-white h-12">Login</Button>
+        <Link href="" className="block text-blue-600 text-center">Forgot Password?</Link>
         <hr className=" mb-8 mt-8"/>
-        <Button type="submit" className="w-full bg-green-600 text-semibold text-white h-12">Create account</Button>
+        <Button type="submit" className="w-full hover:bg-green-600 bg-green-600 text-semibold text-white h-12">Create account</Button>
       </form>
     </Form>
     </aside>
+
+    <p className="text-center mt-5"><span className="font-bold">Create a Page</span> for a celebrity, brand or business.</p>
+    </div>
   )
 }
