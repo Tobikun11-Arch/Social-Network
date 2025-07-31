@@ -6,12 +6,10 @@ export default function Homepage() {
   return (
     <div className="min-h-screen flex flex-col">
 
-      <main className="flex-grow bg-gray-100 flex items-center justify-center p-4">
+      <main className="flex-grow bg-gray-100 flex items-center justify-center p-4 md:p-14">
         <section className='lg:flex gap-48'>
           <Hero />
-          <aside className='bg-white p-8 rounded-lg shadow-lg w-full'>
           <LoginForm />
-          </aside>
         </section>
       </main>
 
