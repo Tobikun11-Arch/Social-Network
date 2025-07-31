@@ -1,4 +1,4 @@
-# Social Network (Facebook - Inspired Project)
+# Social Network (Facebook Clone project)
 
 This repository is a **full-stack clone inspired by the original Facebook platform**, created solely for **learning purposes**, **architecture practice**, and **handling large-scale web projects**.
 
