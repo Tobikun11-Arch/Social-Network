@@ -1,15 +1,9 @@
-// // app/homepage/homepageModel.ts
+import { FormLogin } from "./homepageController";
 
-// import { HomepageFormData } from './schema';
+export async function loginUser(data: FormLogin) {
+  console.log("Logging in with data:", data);
+  if(data.Email) {
+    return "success"
+  }
 
-// export async function submitHomepageForm(data: HomepageFormData) {
-//   const res = await fetch('/api/homepage', {
-//     method: 'POST',
-//     headers: {
-//       'Content-Type': 'application/json',
-//     },
-//     body: JSON.stringify(data),
-//   });
-
-//   return await res.json();
-// }
+}

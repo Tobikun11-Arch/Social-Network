@@ -1,6 +1,6 @@
 import { z } from "zod"
 
-const formSchema = z.object({
+export const formSchema = z.object({
   Email: z.string().min(2, {
     message: "Username must be at least 2 characters.",
   }),

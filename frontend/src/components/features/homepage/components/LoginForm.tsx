@@ -2,9 +2,11 @@
 
 import { zodResolver } from "@hookform/resolvers/zod"
 import { useForm } from "react-hook-form"
-import { z } from "zod"
 import Link from "next/link"
-
+import { handleLogin } from "../homepageController"
+import { loginUser } from "../homepageModel"
+import { formSchema } from "../schema"
+import { FormLogin } from "../homepageController"
 import { Button } from "@/components/ui/button"
 import {
   Form,
@@ -17,21 +19,11 @@ import {
 } from "@/components/ui/form"
 import { Input } from "@/components/ui/input"
 
-const formSchema = z.object({
-  Email: z.string().min(2, {
-    message: "Username must be at least 2 characters.",
-  }),
-  Password: z.string().min(6, {
-    message: "Password must be at least 6 characters.",
-  }),
-})
-
 interface Field {
   name: "Email" | "Password"
   label: string
   type: "email" | "password" 
 }
-
 
 export default function LoginForm() {
   const form = useForm({
@@ -47,9 +39,16 @@ export default function LoginForm() {
     { name: "Password", label: "Password", type: "password" } 
   ] as const
 
-  const onSubmit = (data: z.infer<typeof formSchema>) => {
-    console.log("Form submitted:", data)
-    // Seperate this logic on homepageController
+  const onSubmit = (rawData: FormLogin) => {
+    const validatation = handleLogin(rawData)
+
+    if(!validatation.success) {
+      console.error("Validation failed:", validatation.errors);
+      return;
+    }
+
+    const response = loginUser(validatation.data);
+    console.log("Login response:", response);
   }
 
   return (
