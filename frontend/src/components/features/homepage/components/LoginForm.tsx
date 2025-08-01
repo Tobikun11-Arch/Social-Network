@@ -76,7 +76,11 @@ export default function LoginForm() {
         <Button type="submit" className="w-full hover:bg-blue-800 bg-blue-600 text-semibold text-white h-12">Login</Button>
         <Link href="" className="block text-blue-600 text-center">Forgot Password?</Link>
         <hr className=" mb-8 mt-8"/>
-        <Button type="submit" className="w-full hover:bg-green-600 bg-green-600 text-semibold text-white h-12">Create account</Button>
+        <div className="flex justify-center items-center">
+          <Link href={"/sign-up"} className="rounded-md flex justify-center items-center w-full lg:w-3/4 hover:bg-green-600 bg-green-600 text-semibold text-white h-12">
+            Create new account
+          </Link>
+        </div>
       </form>
     </Form>
     </aside>
