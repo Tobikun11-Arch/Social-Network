@@ -1,12 +1,10 @@
 "use client"
 
+import React from 'react'
+import Footer from '../../footer/Footer'
+import { FormLogin } from '../../homepage/homepageController'
 import { zodResolver } from "@hookform/resolvers/zod"
 import { useForm } from "react-hook-form"
-import Link from "next/link"
-import { handleLogin } from "../homepageController"
-import { loginUser } from "../homepageModel"
-import { formSchema } from "../schema"
-import { FormLogin } from "../homepageController"
 import { Button } from "@/components/ui/button"
 import {
   Form,
@@ -18,6 +16,8 @@ import {
   FormMessage,
 } from "@/components/ui/form"
 import { Input } from "@/components/ui/input"
+import { formSchema } from '../../homepage/schema'
+import Link from 'next/link'
 
 interface Field {
   name: "Email" | "Password"
@@ -25,7 +25,8 @@ interface Field {
   type: "email" | "password" 
 }
 
-export default function LoginForm() {
+export default function SignUpForm() {
+
   const form = useForm({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -40,21 +41,15 @@ export default function LoginForm() {
   ] as const
 
   const onSubmit = (rawData: FormLogin) => {
-    const validatation = handleLogin(rawData)
-
-    if(!validatation.success) {
-      console.error("Validation failed:", validatation.errors);
-      return;
-    }
-
-    const response = loginUser(validatation.data);
-    console.log("Login response:", response);
+    // Handle sign-up logic here  
+    console.log("Sign-up data:", rawData);
   }
 
   return (
-    <div className="flex-col w-full">
-      <aside className='bg-white p-8 rounded-lg shadow-lg w-full xl:w-3/4 xl:mx-auto'>
-    <Form {...form}>
+    <div className='flex flex-col  min-h-screen'>
+      <section className='flex-grow bg-gray-100 flex items-center justify-center p-4 md:p-14'>
+        <h1>Facebook</h1>
+        <Form {...form}>
       <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-3">
         {fields.map((fieldDef) => (
           <FormField
@@ -82,9 +77,8 @@ export default function LoginForm() {
         </div>
       </form>
     </Form>
-    </aside>
-
-    <p className="text-center mt-5"><span className="font-bold">Create a Page</span> for a celebrity, brand or business.</p>
+      </section>
+      <Footer />
     </div>
   )
 }
