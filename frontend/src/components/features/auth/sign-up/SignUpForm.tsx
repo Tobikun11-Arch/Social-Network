@@ -46,11 +46,12 @@ export default function SignUpForm() {
   }
 
   return (
-    <div className='flex flex-col  min-h-screen'>
-      <section className='flex-grow bg-gray-100 flex items-center justify-center p-4 md:p-14'>
-        <h1>Facebook</h1>
-        <Form {...form}>
-      <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-3">
+    <div className='flex flex-col min-h-screen'>
+      <section className='flex-grow flex-col bg-gray-100 flex items-center justify-center p-4 md:p-14'>
+      <h1>Facebook</h1>
+      <Form {...form}>
+      <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-3 w-80 bg-white p-6 rounded-lg shadow-md">
+        <p className='text-center'>Create a new account</p>
         {fields.map((fieldDef) => (
           <FormField
           key={fieldDef.name}
