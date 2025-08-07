@@ -83,12 +83,13 @@ export default function SignUpForm() {
                 />
               ))}
             </div>
+            <p>birthday</p>
 
             <Button
               type="submit"
               className="w-full hover:bg-blue-800 bg-blue-600 text-semibold text-white h-12"
             >
-              Login
+              sign up
             </Button>
             <Link href="" className="block text-blue-600 text-center">
               Forgot Password?
