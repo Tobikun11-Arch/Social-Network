@@ -48,7 +48,7 @@ export default function SignUpForm() {
     <div className="flex flex-col min-h-screen">
       <section className="flex-grow flex-col bg-gray-100 flex items-center justify-center p-4 md:p-14">
         <h1 className="text-blue-600 text-5xl mb-5 font-bold">
-          Social Network
+          Social Networks
         </h1>
         <Form {...form}>
           <form
